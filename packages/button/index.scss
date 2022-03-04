@@ -1,0 +1,133 @@
+$wel-button-background--default: #f6f6f6;
+$wel-button-background--hover: #eeeeee;
+$wel-button-background--active: #e0e0e0;
+$wel-button-text--default: #333333;
+
+$wel-button-primary: #4390a2;
+$wel-button-background-primary--active: #55b0c6;
+$wel-button-text-white: #ffffff;
+
+$wel-button-background-outline--hover: #e0eff2;
+$wel-button-background-outline--active: #badde5;
+
+$wel-button-height--default: 32px;
+$wel-button-height--small: 24px;
+$wel-button-height--large: 44px;
+
+$wel-button-font--default: 14px;
+$wel-button-font--small: 12px;
+$wel-button-font--large: 16px;
+
+.wel-button {
+  font-family: inherit;
+  font-weight: bold;
+  display: inline-block;
+  height: $wel-button-height--default;
+  padding: 0px 12px;
+  border: 0px;
+  cursor: pointer;
+  background-color: $wel-button-background--default;
+  transition: opacity 0.25s ease-in, scale 0.25s ease-in,
+    background-color 0.25s ease;
+  border-radius: $wel-button-height--default / 2;
+
+  &:hover:enabled {
+    background-color: $wel-button-background--hover;
+  }
+
+  &:active:enabled {
+    transform: scale(0.95);
+  }
+
+  &:focus:enabled {
+    background-color: $wel-button-background--active;
+  }
+
+  > .wel-button-text {
+    color: $wel-button-text--default;
+    font-size: $wel-button-font--default;
+    font-weight: bold;
+  }
+}
+
+.wel-button.wel-button--primary {
+  background-color: $wel-button-primary;
+
+  &:hover:enabled {
+    background-color: $wel-button-primary;
+    opacity: 0.9;
+  }
+
+  &:focus:enabled {
+    background-color: $wel-button-background-primary--active;
+  }
+
+  .wel-button-text {
+    color: $wel-button-text-white;
+  }
+}
+
+.wel-button--outline {
+  background-color: transparent;
+  border: 1px solid $wel-button-primary;
+
+  &:hover:enabled {
+    background-color: $wel-button-background-outline--hover;
+  }
+
+  &:focus:enabled {
+    background-color: $wel-button-background-outline--active;
+  }
+
+  .wel-button-text {
+    color: $wel-button-primary;
+  }
+}
+
+.wel-button--text {
+  background-color: transparent;
+
+  &:hover:enabled {
+    background-color: $wel-button-background-outline--hover;
+    .wel-button-text {
+      color: $wel-button-primary;
+    }
+  }
+
+  &:focus:enabled {
+    background-color: $wel-button-background-outline--active;
+    .wel-button-text {
+      color: $wel-button-primary;
+    }
+  }
+
+  .wel-button-text {
+    color: $wel-button-primary;
+  }
+}
+
+.wel-button--small {
+  height: $wel-button-height--small;
+  border-radius: $wel-button-height--small / 2;
+  padding: 0px 10px;
+
+  .wel-button-text {
+    font-size: $wel-button-font--small;
+  }
+}
+
+.wel-button--large {
+  height: $wel-button-height--large;
+  border-radius: $wel-button-height--large / 2;
+  padding: 0px 14px;
+
+  .wel-button-text {
+    font-size: $wel-button-font--large;
+  }
+}
+
+.wel-button:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+  color: inherit;
+}

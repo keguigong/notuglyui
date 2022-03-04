@@ -1,0 +1,79 @@
+$header-background-color: #f6f6f6;
+$header-background-hover: #eaeaea;
+$border-color: #e1e7ef;
+$cell-background-color: #f3f6f6;
+$cell-background-hover: #ebf4f4;
+
+.wel-table {
+  font-family: inherit;
+  border-collapse: separate;
+  border-spacing: 4px 4px;
+  text-align: center;
+  table-layout: fixed;
+
+  &.wel-table--fulfill {
+    width: 100%;
+  }
+
+  .wel-table-head-cell,
+  .wel-table-cell {
+    border-radius: 5px;
+    padding: 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.wel-table-cell--nowrap {
+      max-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .wel-table-head-cell {
+    font-size: 14px;
+    height: 54px;
+    vertical-align: middle;
+    background-color: $header-background-color;
+    transition: all 0.25s ease-in;
+
+    &:hover {
+      background-color: $header-background-hover;
+    }
+  }
+
+  .wel-table-cell {
+    font-size: 12px;
+    height: 50px;
+    vertical-align: middle;
+    border-collapse: collapse;
+    border: 1px $border-color solid;
+  }
+
+  .wel-table-row {
+    // border-radius: 5px;
+    // border: 1px $border-color solid;
+    // background-color: #E1E7EF;
+    transition: all 0.25s ease-in;
+
+    &:nth-child(2n + 1) {
+      background-color: transparent;
+    }
+
+    &:nth-child(2n) {
+      background-color: $cell-background-color;
+    }
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+
+    &.wel-table-row--clickable {
+      cursor: pointer;
+    }
+
+    &.wel-table-row--selected {
+      background-color: $header-background-hover;
+    }
+  }
+}

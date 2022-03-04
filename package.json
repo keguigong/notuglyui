@@ -1,9 +1,9 @@
 {
   "name": "@keguigong/notuglyui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "author": "keguigong <keguigong@gmail.com>",
-  "description": "Vue components",
+  "description": "Practical UI components based on Vue.js",
   "license": "MIT",
   "main": "lib/notuglyui.umd.min.js",
   "typings": "types/index.d.ts",

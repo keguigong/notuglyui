@@ -18,5 +18,6 @@ module.exports = {
         '@packages': path.resolve('packages')
       }
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production' ? '/notuglyui/' : ''
 }
